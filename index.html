@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSavvy SA | Trusted Picks. Smarter Shopping.</title>
+    <meta name="description" content="We research, compare, and recommend the best products in South Africa so you don't have to.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/product-card.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <custom-navbar></custom-navbar>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-4">
+            <div class="max-w-6xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">The Best Products in South Africa — Reviewed Honestly</h1>
+                <p class="text-xl md:text-2xl mb-8">We research, compare, and recommend the best products so you don't have to.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#featured" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Shop Now</a>
+                    <a href="#how-we-review" class="border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition">How We Review</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section id="featured" class="py-16 px-4 max-w-7xl mx-auto">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold mb-4">🔥 Top Amazon Picks (SA)</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <custom-product-card 
+                        title="Wireless Earbuds Pro" 
+                        price="R899" 
+                        rating="4.5"
+                        image="http://static.photos/technology/640x360/1"
+                        platform="amazon">
+                    </custom-product-card>
+                    <custom-product-card 
+                        title="Smart Watch X3" 
+                        price="R1,499" 
+                        rating="4.2"
+                        image="http://static.photos/technology/640x360/2"
+                        platform="amazon">
+                    </custom-product-card>
+                    <custom-product-card 
+                        title="Bluetooth Speaker" 
+                        price="R599" 
+                        rating="4.7"
+                        image="http://static.photos/technology/640x360/3"
+                        platform="amazon">
+                    </custom-product-card>
+                    <custom-product-card 
+                        title="Wireless Charger" 
+                        price="R349" 
+                        rating="4.0"
+                        image="http://static.photos/technology/640x360/4"
+                        platform="amazon">
+                    </custom-product-card>
+                </div>
+            </div>
+
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold mb-4">⭐ Best Takealot Deals</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <custom-product-card 
+                        title="Air Fryer Deluxe" 
+                        price="R1,199" 
+                        rating="4.8"
+                        image="http://static.photos/home/640x360/5"
+                        platform="takealot">
+                    </custom-product-card>
+                    <custom-product-card 
+                        title="Coffee Maker Pro" 
+                        price="R899" 
+                        rating="4.3"
+                        image="http://static.photos/home/640x360/6"
+                        platform="takealot">
+                    </custom-product-card>
+                    <custom-product-card 
+                        title="Robot Vacuum" 
+                        price="R2,499" 
+                        rating="4.6"
+                        image="http://static.photos/home/640x360/7"
+                        platform="takealot">
+                    </custom-product-card>
+                    <custom-product-card 
+                        title="Electric Kettle" 
+                        price="R499" 
+                        rating="4.4"
+                        image="http://static.photos/home/640x360/8"
+                        platform="takealot">
+                    </custom-product-card>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editor's Choice -->
+        <section class="bg-gray-100 py-16 px-4">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12">🏆 Editor's Choice</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="bg-blue-100 text-blue-800 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="award"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Best Overall</h3>
+                        <p class="text-gray-600 mb-4">Wireless Earbuds Pro - Perfect balance of quality and price</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">View Review</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="bg-purple-100 text-purple-800 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="dollar-sign"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Best Value</h3>
+                        <p class="text-gray-600 mb-4">Bluetooth Speaker - Premium sound at an affordable price</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">View Review</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="bg-green-100 text-green-800 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="trending-up"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Trending Now</h3>
+                        <p class="text-gray-600 mb-4">Air Fryer Deluxe - Healthy cooking made easy</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">View Review</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section id="how-we-review" class="py-16 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Why Trust Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're committed to providing honest, unbiased reviews to help you make informed purchasing decisions.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 text-blue-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Thorough Research</h3>
+                    <p class="text-gray-600">We spend hours researching products, reading customer reviews, and comparing specifications.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 text-purple-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="thumbs-up"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Hands-On Testing</h3>
+                    <p class="text-gray-600">Whenever possible, we test products ourselves to provide genuine insights.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 text-green-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">South African Focus</h3>
+                    <p class="text-gray-600">We focus on products available and relevant to South African consumers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="bg-blue-600 text-white py-12 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Get the Best Deals Directly to Your Inbox</h2>
+                <p class="mb-6">Subscribe to our newsletter for weekly product recommendations and exclusive deals.</p>
+                <form class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg text-gray-800">
+                    <button type="submit" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Subscribe</button>
+                </form>
+                <p class="text-sm mt-4 text-blue-100">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+    <script>
+        feather.replace();
+    </script>
+    <script src="components/cookie-consent.js"></script>
+    <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
