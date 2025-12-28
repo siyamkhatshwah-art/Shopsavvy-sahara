@@ -87,4 +87,101 @@ cookie-consent {
 button:disabled {
     opacity: 0.7;
     cursor: not-allowed !important;
+    /* Simple styling for affiliates section - adjust colors/spacing to match your theme */
+.affiliates-section {
+  padding: 48px 16px;
+  background: #fff;
+  color: #111;
+  border-top: 1px solid #eee;
+}
+.affiliates-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.affiliates-section h2 {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+}
+.affiliates-section .affiliate-disclosure {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 18px;
+}
+.affiliates-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 12px;
+}
+@media (max-width: 992px) {
+  .affiliates-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 680px) {
+  .affiliates-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .affiliates-grid { grid-template-columns: 1fr; }
+}
+.aff-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+.aff-card .thumb {
+  width: 100%;
+  padding-top: 56%; /* 16:9 placeholder */
+  background-size: cover;
+  background-position: center;
+}
+.aff-card .info {
+  padding: 10px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.aff-card .title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+.aff-card .meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+.aff-card .actions {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.aff-card .price {
+  font-weight: 700;
+  color: #111;
+}
+.aff-card .buy-btn {
+  background: #0066ff;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+}
+.aff-card .store-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #efefef;
+  font-size: 0.75rem;
+  color: #333;
+}
+.view-more { margin-top: 12px; }
 }
