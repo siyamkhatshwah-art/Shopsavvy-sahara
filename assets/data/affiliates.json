@@ -1,0 +1,50 @@
+[
+  {
+    "id": "amazon-1",
+    "title": "Example Bluetooth Headphones",
+    "image": "assets/images/aff-amazon-headphones.jpg",
+    "price": "R599",
+    "store": "Amazon",
+    "affiliate_url": "https://www.amazon.example/?tag=YOUR_ASSOCIATE_TAG"
+  },
+  {
+    "id": "takealot-1",
+    "title": "Stylish Backpack",
+    "image": "assets/images/aff-takealot-backpack.jpg",
+    "price": "R399",
+    "store": "Takealot",
+    "affiliate_url": "https://www.takealot.example/?affid=YOUR_ID"
+  },
+  {
+    "id": "temu-1",
+    "title": "Budget Sneakers",
+    "image": "assets/images/aff-temu-sneakers.jpg",
+    "price": "R199",
+    "store": "Temu",
+    "affiliate_url": "https://www.temu.example/?partner=YOUR_ID"
+  },
+  {
+    "id": "shein-1",
+    "title": "Summer Dress",
+    "image": "assets/images/aff-shein-dress.jpg",
+    "price": "R149",
+    "store": "Shein",
+    "affiliate_url": "https://www.shein.example/?af=YOUR_ID"
+  },
+  {
+    "id": "alibaba-1",
+    "title": "Wholesale Phone Case",
+    "image": "assets/images/aff-alibaba-case.jpg",
+    "price": "$2.50",
+    "store": "Alibaba",
+    "affiliate_url": "https://www.alibaba.example/?affid=YOUR_ID"
+  },
+  {
+    "id": "gumtree-1",
+    "title": "Local Secondhand Table",
+    "image": "assets/images/aff-gumtree-table.jpg",
+    "price": "R250",
+    "store": "Gumtree",
+    "affiliate_url": "https://www.gumtree.example/?aff=YOUR_ID"
+  }
+]
