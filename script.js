@@ -197,3 +197,56 @@ function attachHandlers() {
 }
 
 document.addEventListener('DOMContentLoaded', loadAffiliates);
+// Put this at assets/js/affiliates.js
+async function loadAffiliates() {
+  const grid = document.getElementById('affiliates-grid');
+  if (!grid) return;
+  try {
+    const res = await fetch('assets/data/affiliates.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Failed to load affiliate data');
+    const items = await res.json();
+    if (!Array.isArray(items)) throw new Error('Invalid affiliates.json');
+
+    grid.innerHTML = items.map(renderCard).join('');
+    attachHandlers();
+  } catch (err) {
+    console.error('Affiliates error:', err);
+    grid.innerHTML = '<p>Unable to load offers right now.</p>';
+  }
+}
+
+function renderCard(p) {
+  const imgStyle = p.image ? `style="background-image: url('${escapeAttr(p.image)}')" aria-hidden="true"` : '';
+  const priceHtml = p.price ? `<span class="price">${escapeHtml(p.price)}</span>` : '';
+  const store = p.store ? `<span class="store-badge">${escapeHtml(p.store)}</span>` : '';
+  const button = p.affiliate_url
+    ? `<a class="buy-btn" data-affiliate data-id="${escapeHtml(p.id)}" href="${escapeAttr(p.affiliate_url)}" target="_blank" rel="noopener sponsored">Buy</a>`
+    : `<button class="buy-btn" disabled>Link missing</button>`;
+
+  return `
+    <article class="aff-card" aria-labelledby="aff-${escapeHtml(p.id)}">
+      <div class="thumb" ${imgStyle}></div>
+      <div class="info">
+        <h3 id="aff-${escapeHtml(p.id)}" class="title">${escapeHtml(p.title)}</h3>
+        <div class="meta">${store} ${priceHtml}</div>
+        <div class="actions">${button}</div>
+      </div>
+    </article>
+  `;
+}
+
+function escapeHtml(s) { if (s === null || s === undefined) return ''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escapeAttr(s) { if (s === null || s === undefined) return ''; return String(s).replace(/"/g,'&quot;').replace(/'/g,"&#39;"); }
+
+function attachHandlers() {
+  const anchors = document.querySelectorAll('a[data-affiliate]');
+  anchors.forEach(a => {
+    a.addEventListener('click', () => {
+      const id = a.getAttribute('data-id') || '';
+      // Optional analytics hook:
+      // if (window.gtag) gtag('event', 'click', {event_category: 'affiliate', event_label: id});
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', loadAffiliates);
