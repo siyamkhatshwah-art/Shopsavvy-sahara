@@ -186,3 +186,23 @@
     <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
 </html>
+<!-- Add this snippet where you want the affiliates section (e.g., paste into index.html where you want it to appear) -->
+<section id="affiliates" class="affiliates-section">
+  <div class="container">
+    <h2>Shop & Support — Our Picks</h2>
+    <p class="affiliate-disclosure">
+      Some links on this page are affiliate links. If you buy through these links we may earn a commission at no extra cost to you. Thank you for supporting the site.
+    </p>
+
+    <div id="affiliates-grid" class="affiliates-grid" aria-live="polite"></div>
+
+    <p class="view-more">
+      <a href="affiliates.html">See more deals & offers</a>
+    </p>
+  </div>
+
+  <!-- If you already bundle CSS/JS in your site, include the CSS/JS there instead.
+       These relative paths assume the files below are placed at: assets/css/, assets/js/, assets/data/ -->
+  <link rel="stylesheet" href="assets/css/affiliates.css">
+  <script defer src="assets/js/affiliates.js"></script>
+</section>
